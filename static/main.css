@@ -1,0 +1,59 @@
+@font-face {
+    font-family: neue-montreal-medium;
+    src: url('fonts/Neue\ Montreal\ Medium\ 500.otf');
+  }
+@font-face {
+    font-family: neue-montreal-regular;
+    src: url('fonts/Neue\ Montreal\ Regular\ 400.otf');
+  }
+@font-face {
+    font-family: neue-montreal-bold;
+    src: url('fonts/Neue\ Montreal\ Bold\ 700.otf');
+  }
+@font-face {
+    font-family: neue-montreal-light;
+    src: url('fonts/Neue\ Montreal\ Light\ 300.otf');
+  }
+body{
+    width: 100%;
+    margin: 0 auto;
+    font-family: neue-montreal-regular;
+    display: flex;
+    flex-direction: column;
+    color: #FDE3A7;
+}
+div.body{
+    width: 100%;
+}
+a{
+    color: #FDE3A7;
+    text-decoration: none;
+}
+.top-menu{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.hero-section{
+    background-color: #525659;
+    height: 100vh;
+}
+.logo{
+    font-family: neue-montreal-light;
+    color: #FDE3A7;
+}
+.top-menu-items{
+    display: flex;
+    flex-direction: row;
+    font-family: neue-montreal-light;
+    list-style: none;
+}
+.top-menu-items li{
+    margin: 7px 10px;
+    font-size: 12px;
+}
+.top-menu-phonenumber{
+    font-family: neue-montreal-light;
+}
