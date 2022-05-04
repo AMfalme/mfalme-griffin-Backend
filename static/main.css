@@ -71,6 +71,7 @@ div.body{
     flex-direction: row;
     font-family: neue-montreal-regular;
     list-style: none;
+    flex-wrap: wrap;
 }
 .top-menu-items li{
     margin: 7px 10px;
@@ -92,6 +93,9 @@ div.body{
     display: flex;
     width: 95%;
     z-index: 2;
+}
+.social-media ul{
+    padding-left: 10px;
 }
 .scroll-bar{
     width: 5px;
@@ -144,16 +148,27 @@ section{
     flex-direction: row;
     padding: 30px;
     padding-top: 80px;
+    
+}
+.about .center-div{
+    display: flex;
+    flex-direction: row;
+}
+@media only screen and (max-width: 600px) {
+    .about .center-div{
+        display: flex;
+        flex-direction: column;   
+    }
 }
 .about .frames{
-    width: 50%;
-    min-width: 300px;
+    /* width: 50%;
+    min-width: 300px; */
     display: flex;
     justify-content: center;
 }
 .about .about-details{
-    width: 50%;
-    min-width: 300px;
+    /* width: 50%;
+    min-width: 300px; */
 }
 .frames .dotted-img{
     height: 255px;
@@ -176,7 +191,7 @@ section{
 
 }
 .about h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 400;
     line-height: 60px;
     letter-spacing: 0em;
@@ -184,7 +199,7 @@ section{
 
 }
 .about p{
-    width: 300px;
+    max-width: 300px;
     font-size: 15px;
     font-weight: 400;
     line-height: 19px;
@@ -246,7 +261,7 @@ progress::-webkit-progress-value {
     background-color: var(--base-theme-color);
     width: 100%;
     height: 2px;
-    margin: 40px;
+    margin: 40px 0;
 }
 .skills-set{
     display: flex;
