@@ -3,6 +3,7 @@
     --base-grey: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #C4C4C4;
     --base-maroon: #9C4A38;
     --black: #000;
+    --light-grey: #C4C4C4;
 }
 @font-face {
     font-family: neue-montreal-medium;
@@ -38,6 +39,15 @@ li{
 div.body{
     width: 100%;
 }
+.dark-grey-bg{
+    background: var(--base-grey);
+}
+.black-bg{
+    background-color: var(--black);
+}
+.light-grey-bg{
+    background-color: var(--light-grey);
+}
 .top-menu{
     position: fixed;
     display: flex;
@@ -46,7 +56,6 @@ div.body{
     justify-content: space-around;
 }
 .hero-section{
-    background: var(--base-grey);
     height: 100vh;
     min-height: 500px;
     align-items: center;
@@ -98,6 +107,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .call-to-action{
     width: 90%;
@@ -130,7 +140,6 @@ section{
     margin: 10px 0;
 }
 .about{
-    background-color: var(--black);
     display: flex;
     flex-direction: row;
     padding: 30px;
@@ -154,7 +163,8 @@ section{
 }
 .frames .white-bg{
     height: 400px;
-    width: 290px;
+    width: 30%;
+    min-width: 225px;
 }
 .about h5{
     color: var(--base-maroon);
@@ -185,7 +195,7 @@ section{
 .progress-bar{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    /* width: 400px; */
     margin: 10px 0;
 }
 progress, progress::-webkit-progress-bar {
@@ -205,7 +215,6 @@ progress::-webkit-progress-value {
     font-family: neue-montreal-light;
 }
 .skills-section{
-    background:  var(--base-grey);
     align-items: center;
     display: flex;
     justify-content: center;
@@ -215,9 +224,7 @@ progress::-webkit-progress-value {
 .skills-section h2, .section-title{
     color: var(--base-maroon);
     font-size: 15px;
-    line-height: 19px;
-    letter-spacing: 0.075em;
-    text-align: left;
+    text-transform: uppercase;
 }
 .skills-section h1{
     font-size: 40px;
@@ -261,8 +268,8 @@ progress::-webkit-progress-value {
     display: flex;
 }
 .latest-projects{
-    background-color: var(--black);
     padding: 100px 0;
+    flex-direction: column;
 }
 .latest-projects .center-div{
     display: flex;
@@ -272,7 +279,7 @@ progress::-webkit-progress-value {
     font-size: 34px;
     font-family: 'neue-montreal-light';
     letter-spacing: 0.25em;
-    line-height: 6;
+    
 }
 .latest-projects .section-title{
     padding: 40px 0;
@@ -284,9 +291,205 @@ progress::-webkit-progress-value {
     float:right;
 }
 .project-figure{
-    background: #C4C4C4;
+    background: var(--light-grey);
     width: 266px;
     height: 358px;
     left: 0px;
     top: 0px;
+    position: relative;
+}
+.projects-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-text .space-out{
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.space-out .place-left{
+    position: relative;
+}
+.place-left h1{
+    position: absolute;
+    bottom: 30%;
+}
+.arrow{
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    padding: 5px;
+    transform: rotate(-75deg);
+    -webkit-transform: rotate(-75deg);
+    position: absolute;
+    margin: 15px;
+    left: 3px;
+    top: -5px;
+}
+.arrow::before{
+    width: 26px;
+    content: '';
+    height: 1px;
+    background: #000;
+    transform: rotate(43deg);
+    position: absolute;
+    left: -8px;
+    margin: -4px;
+}
+.arrow-border{
+    border: 1px solid #000;
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    margin: 70px;
+}
+section.testimonials{
+    background-color: var(--light-grey);
+    padding: 100px 0;
+}
+.testimonials h1.text-slogan{
+    font-family: neue-montreal-regular;
+    font-size: 32px;
+    font-weight: 200;
+    /* min-width: 410px; */
+    width: 60%;
+}
+.testimonies{
+    width: 55%;
+    min-width: 200px;
+    float: right;
+    
+}
+.testimonies blockquote::before {
+    content: open-quote;
+    color: var(--base-maroon);
+    font-size: 170px;
+    margin: -20px 20px 0 0;
+}
+.testimonies blockquote{
+    margin-left: 0;
+    display: flex;
+}
+.testimony .quote{
+    display: flex;
+    flex-direction: column;
+}
+.testimony figcaption{
+    font-family: neue-montreal-bold;
+    font-size: large;
+}
+.testimony h5{
+    text-transform: uppercase;
+    color: var(--base-maroon);
+}
+.arrow-slider{
+    position: relative;
+}
+.arrow-slider .arrow.prev{
+    transform: rotate(138deg);
+    -webkit-transform: rotate(138deg);
+    border: solid var(--base-theme-color);
+    border-width: 0 2px 2px 0;
+}
+.arrow-slider .arrow.next{
+    transform: rotate(318deg);
+    -webkit-transform: rotate(318deg);
+    margin-left: 65px;
+    border: solid var(--base-theme-color);
+    border-width: 0 2px 2px 0;
+}
+.arrow-slider .arrow::before{
+    background-color: var(--base-theme-color);
+    height: 2px;
+    cursor: pointer;
+}
+section.news{
+    font-family: neue-montreal-light;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+section.news h1{
+    text-transform: capitalize;
+    font-family: neue-montreal-regular;
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--base-theme-color);
+}
+.news .blog-img{
+    height: 254px;
+    width: 290px;
+    left: 0px;
+    top: 197px;
+    border-radius: 0px;
+    background-color: var(--light-grey);
+}
+.blog-snippets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog-caption{
+    display: flex;
+    flex-direction: row;
+}
+.blog-caption p{
+    text-transform: capitalize;
+}
+.blog-caption .blog-header{
+    color: var(--base-theme-color);
+}
+.news .blog-title{
+    font-family: neue-montreal-medium;
+    text-transform:initial;
+    color: var(--base-theme-color);
+}
+section.footer{
+    padding: 100px 0;
+}
+.footer h1{
+    text-transform: capitalize;
+    font-family: neue-montreal-regular;
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--base-theme-color);
+}
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .logos img{
+    width: 150px;
+    margin: 10px 0;
+    
+}
+.logos{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact-form .form-input input, .contact-form .form-input textarea{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--base-theme-color);
+    width: 100%;
+    margin: 14px 0;
+    color: var(--base-theme-color);
+}
+.contact-form .form-input input::placeholder, .contact-form .form-input textarea::placeholder{
+    color: var(--base-theme-color);
+}
+.contact-form button{
+    border: 1px solid var(--base-maroon);
+    background: var(--base-maroon);
+    color: #fff;
+    width: 100px;
+    height: 35px;
 }
