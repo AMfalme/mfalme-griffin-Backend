@@ -178,6 +178,11 @@ section{
     height: 180px !important; 
     overflow:visible !important;
 }
+
+.harmburger-menu{
+    margin: 10px 0;
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .about .center-div{
         display: flex;
@@ -191,11 +196,17 @@ section{
     .top-menu{
         align-items: flex-start;
     }
+    .harmburger-menu{
+        display: block;
+    }
+    .testimonies{
+        float: none !important;
+        width: 100% !important;
+    }
+    .testimonials h1.text-slogan{
+        width: 100% !important;
+    }
 }
-.harmburger-menu{
-    margin: 10px 0;
-}
-
 .about .frames{
     /* width: 50%;
     min-width: 300px; */
@@ -304,6 +315,9 @@ progress::-webkit-progress-value {
     flex-direction: row;
     justify-content: space-around;
 }
+.skills-set img{
+    width: 25px;
+}
 .set-flex{
     display: flex;
     flex-direction: row;
@@ -313,6 +327,7 @@ progress::-webkit-progress-value {
 }
 .skills-set p{
     width: 400px;
+    font-size: 14px;
 }
 .skills-set h3{
     align-items: center;
