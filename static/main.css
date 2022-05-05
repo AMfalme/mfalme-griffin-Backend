@@ -54,6 +54,8 @@ div.body{
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    z-index: 4;
+    transition: .5s;
 }
 .hero-section{
     height: 100vh;
@@ -136,6 +138,7 @@ section{
 }
 .center-div{
     width: 80%;
+    z-index: 3;
 }
 .call-to-action h2{
     font-size: 65px;
@@ -153,6 +156,7 @@ section{
 .about .center-div{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 @media only screen and (max-width: 600px) {
     .about .center-div{
