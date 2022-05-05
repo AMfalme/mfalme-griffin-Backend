@@ -14,10 +14,22 @@ var latestProjectsToTop = window.pageYOffset + latestProjects.getBoundingClientR
 var testimonialsSectionToTop = window.pageYOffset + testimonials.getBoundingClientRect().top;
 var newsSectionToTop = window.pageYOffset + news.getBoundingClientRect().top;
 var footerSectionToTop = window.pageYOffset + footer.getBoundingClientRect().top;
-console.log(heroDistanceToTop);
+var menuButton = document.querySelector(".harmburger-menu");
 
 
 window.addEventListener("scroll", () => {
+
+    changeMenuBackground();
+    displayScrollPosition();
+    });
+
+    menuButton.addEventListener("click", ()=>{
+        console.log("was clicked");
+        document.querySelector(".top-menu-items").classList.toggle("toggle-harmburger-menu")
+        // document.querySelector(".top-menu").style.cssText = "";
+    });
+
+function changeMenuBackground() {
     if( window.pageYOffset < aboutDistanceToTop){
         scrollPosition.style = "background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #C4C4C4";
         console.log('we are at the hero section')
@@ -34,6 +46,15 @@ window.addEventListener("scroll", () => {
         scrollPosition.style.background = "#C4C4C4";
     } else if( window.pageYOffset < footerSectionToTop) {
         scrollPosition.style.background = "black";
-    } else if( window.pageYOffset < (footerSectionToTop + footer.scrollTop)){
+    } else if( window.pageYOffset < (footerSectionToTop + footer.scrollHeight)){
         scrollPosition.style.background ="#C4C4C4";
-    }});
+    }
+}
+
+function displayScrollPosition(){
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.height = scrolled + "%";
+}
+

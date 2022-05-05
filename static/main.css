@@ -57,6 +57,18 @@ div.body{
     z-index: 4;
     transition: .5s;
 }
+.menu-responsive{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.harmburger-menu div{
+    width: 35px;
+  height: 5px;
+  background-color: var(--base-maroon);
+  margin: 6px 0;
+  cursor: pointer;
+}
 .hero-section{
     height: 100vh;
     min-height: 500px;
@@ -106,7 +118,9 @@ div.body{
     background-color: var(--base-theme-color);
 }
 .scroll-bar-position{
-    background-color: var(--base-theme-color);
+    background-color: var(--base-maroon);
+    width: 5px;
+    height: 0%;
 }
 section{
     z-index: 3;
@@ -158,12 +172,30 @@ section{
     flex-direction: row;
     justify-content: space-around;
 }
+/* Menu on small screens below tablet  */
+
+.toggle-harmburger-menu{
+    height: 180px !important; 
+    overflow:visible !important;
+}
 @media only screen and (max-width: 600px) {
     .about .center-div{
         display: flex;
         flex-direction: column;   
     }
+    .top-menu ul, .top-menu a{
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+    }
+    .top-menu{
+        align-items: flex-start;
+    }
 }
+.harmburger-menu{
+    margin: 10px 0;
+}
+
 .about .frames{
     /* width: 50%;
     min-width: 300px; */
