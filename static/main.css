@@ -444,7 +444,7 @@ section.testimonials{
     display: flex;
     flex-direction: column;
 }
-.testimony figcaption{
+.testimony .figcaption{
     font-family: neue-montreal-bold;
     font-size: large;
 }
