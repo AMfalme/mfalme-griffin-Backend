@@ -1,4 +1,4 @@
-# The main django app for centralbpo.com
+# The main wagtail-django app for backend services for mfalmegriffin.co.ke
 
 # Requirements
 * Python 3.8.10 interpreter
